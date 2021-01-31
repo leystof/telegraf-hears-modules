@@ -1,0 +1,26 @@
+{
+  "name": "telegraf-hears-modules",
+  "version": "1.0.0",
+  "description": "hearsModules for telegraf",
+  "main": "index.js",
+  "scripts": {
+    "test": "..."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leystof/telegraf-hears-modules.git"
+  },
+  "keywords": [
+    "telegraf",
+    "telegram",
+    "hears",
+    "modules",
+    "nodejs"
+  ],
+  "author": "Leystof <Leystof@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "telegraf": "^4.0.2"
+  },
+  "homepage": "https://github.com/leystof/telegraf-hears-modules/#readme"
+}
