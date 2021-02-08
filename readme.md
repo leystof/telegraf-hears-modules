@@ -2,6 +2,10 @@
 # Telegraf hearModules
 `npm install telegraf-hears-modules`
 
+![example](https://github.com/leystof/telegraf-hears-modules/blob/master/example/example.png)
+- ![#FFCC66](https://via.placeholder.com/15/FFCC66/000000?text=+) Module is disabled `this.disable = true`
+- ![#99CC99](https://via.placeholder.com/15/99CC99/000000?text=+) Successful module loading
+- ![#F2777A](https://via.placeholder.com/15/F2777A/000000?text=+) Error module loading
 ## Example
 ### index.js
 ```javascript

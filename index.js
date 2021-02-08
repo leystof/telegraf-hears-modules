@@ -30,11 +30,21 @@ function load(bot, path, data = {}) {
         if ( hearModule.disable ) 
           return console.log(`\x1b[93m\x1b[0m Import dir: \x1b[2m ${path}/${file} \x1b[0m`);
 
+        if ( !hearModule.func ) {
+          console.log(`\x1b[31m\x1b[0m Import dir: \x1b[2m ${path}/${file} \x1b[0m`);
+          throw new Error("Enter 'func' Handler");
+        }
+
         if ( hearModule.triggers )
           bot.hears(hearModule.triggers, hearModule.func);
 
         if ( hearModule.callback ) 
           bot.action((value,ctx) => { return callbackCheck(hearModule.callback, ctx); }, hearModule.func);
+
+        if ( !hearModule.callback && !hearModule.triggers ) {
+          console.log(`\x1b[31m\x1b[0m Import dir: \x1b[2m ${path}/${file} \x1b[0m`);
+          throw new Error("Enter 'triggers' or 'callback' Handler in module");
+        }
 
         console.log(`\x1b[32m\x1b[0m Import dir: \x1b[34m ${dir}/${file} \x1b[0m`);
       } catch (err) {
